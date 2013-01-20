@@ -26,16 +26,8 @@ while ($donnees = $reponse->fetch(PDO::FETCH_ASSOC)) {
 
 //Gestion titre page :)
 $page=explode('/', $_SERVER['PHP_SELF']);
-	switch ($page['3']) {
-		case 'index.php':
-			$titre_page= "Acceuil";
-			break;
-		case 'news.php':
-			$titre_page= "News";
-			break;
-		
-		
-	}
+$vire_ext = explode('.', $page['3']);	
+$titre_page = ucfirst($vire_ext['0']);
 //Gestion icon
 	function icon($nom){
 			echo '<img src="icons/'.$nom.'.png" alt="Icon :'.$nom.'">';	 

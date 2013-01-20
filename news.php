@@ -55,7 +55,8 @@ while($req = $sth->fetch(PDO::FETCH_ASSOC)){
 ?>
 
 <h6><?php  finduser($req['id_user']); ?></h6>
-
+<p><?php echo $req['contenus'] ?></p>
+<small>Le <?php echo $req['date'] ?></small>
 <?php
 }
 

@@ -1,8 +1,9 @@
+<?php include 'config.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <title>Bootstrap, from Twitter</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+    <title><?php echo $titre_page ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -19,6 +20,7 @@
       }
     </style>
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/lightbox.css" rel="stylesheet" />
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -42,7 +44,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">Project name</a>
+          <a class="brand" href="#"><?php echo nom_site ?></a>
           <div class="nav-collapse collapse">
             
                   <ul class="nav navbar-text pull-right" role="navigation">
@@ -59,7 +61,7 @@
                   
                   </ul>
             <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
+              <li class="active"><a href="index.php"><?php icon('house'); ?></a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#contact">Contact</a></li>
          

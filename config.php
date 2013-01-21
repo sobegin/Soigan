@@ -64,4 +64,21 @@ try {
 	function css($lien){
 		echo '<link href="css/'.$lien.'.css" rel="stylesheet">';
 	}
+//Fonction alerte
+	function alert($css,$contenu,$titre){
+		if(!empty($titre)){
+		echo '<div class="alert '.$css.' alert-block">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            <h4 class="alert-heading">'.$titre.'</h4>
+            <p>'.$contenu.'
+            </p>
+          </div>';
+      }
+      else{
+      		echo '<div class="alert alert-block '.$css.' fade in">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            <p>'.$contenu.'</p>
+          </div>';
+      }
+	}
 ?>

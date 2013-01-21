@@ -1,4 +1,5 @@
-<?php include 'config.php'; ?>
+<?php include 'config.php'; 
+session_start() ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -45,9 +46,11 @@
             <span class="icon-bar"></span>
           </a>
           <a class="brand" href="#"><?php echo nom_site ?></a>
-          <div class="nav-collapse collapse">
-            
-                  <ul class="nav navbar-text pull-right" role="navigation">
+          
+        <div class="nav-collapse collapse">
+          <?php //Si il est connecté : 
+          if (!empty($_SESSION['m']['connexion'])){ ?>
+            <ul class="nav navbar-text pull-right" role="navigation">
                     <li class="dropdown">
                       <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
                       <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
@@ -60,6 +63,47 @@
                     </li>
                   
                   </ul>
+          <?php } // si il est pas connecté : 
+          else{ ?>
+          <ul class="nav navbar-text pull-right" role="navigation">
+                    <li class="dropdown">
+                      <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Se connecter <b class="caret"></b></a>
+                      <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                        <style type="text/css">
+                        form.margin{
+                        margin-top:2px;
+                        margin-bottom:2px;
+                        margin-right:5px;
+                        margin-left:5px;
+                      }
+                        </style>
+                        
+                        <form class="margin">
+  <fieldset>
+    <legend>Connexion</legend>
+    
+    <input type="text" placeholder="Votre Pseudo">
+    <input type="password" placeholder="Votre Password">
+    <label class="checkbox">
+      <input type="checkbox"> Resté connecter
+    </label>
+    <a class="btn btn-success" href="#Connexion">Connexion</a><br/>
+    <small><a href="#PassOubliez">Mot de passe perdu ?</a></small><br />
+    <small><a href="#Création">Crée un compte ?</a></small>
+  </fieldset>
+</form>
+                      </ul>
+                    </li>
+                  
+                  </ul>
+                  <?php
+
+          }
+
+          ?>
+                     
+          
+                  
             <ul class="nav">
               <li class="active"><a href="index.php"><?php icon('house'); ?></a></li>
               <li><a href="#about">About</a></li>

@@ -20,6 +20,7 @@
                }
  ?>
           </div></div>
+          
     <div class="item"><div class="hero-unit"><h1>Profil</h1>
             <p>Ici des infos sur le profils des gens à coder plus tard </p>
             <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p></div></div>

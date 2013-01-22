@@ -78,16 +78,16 @@ session_start() ?>
                       }
                         </style>
                         
-                        <form class="margin">
+                        <form class="margin" method="POST" action="#Connexion">
   <fieldset>
     <legend>Connexion</legend>
     
-    <input type="text" placeholder="Votre Pseudo">
-    <input type="password" placeholder="Votre Password">
+    <input type="text"  name="pseudo" placeholder="Votre Pseudo">
+    <input type="password" name="password" placeholder="Votre Password">
     <label class="checkbox">
-      <input type="checkbox"> Resté connecter
+      <input type="checkbox" name="cookie"> Resté connecter
     </label>
-    <a class="btn btn-success" href="#Connexion">Connexion</a><br/>
+    <center><input type="submit" class="btn btn-success">Connexion</center><br/>
     <small><a href="#PassOubliez">Mot de passe perdu ?</a></small><br />
     <small><a href="#Création">Crée un compte ?</a></small>
   </fieldset>
@@ -106,7 +106,7 @@ session_start() ?>
                   
             <ul class="nav">
               <li class="active"><a href="index.php"><?php icon('house'); ?></a></li>
-              <li><a href="#about">About</a></li>
+              <li><a href="#about"><?php icon('') ?></a></li>
               <li><a href="#contact">Contact</a></li>
          
             </ul>

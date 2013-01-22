@@ -36,6 +36,12 @@
    <script src="js/jquery.js"></script>
    <script src="js/bootstrap.js"></script>
    <script src="js/lightbox.js"></script>
+   <script src="js/vendor/jquery.ui.widget.js"></script>
+   <script src="js/jquery.iframe-transport.js"></script>
+   <script src="js/jquery.fileupload.js"></script>
+   <script src="js/jquery.fileupload-fp.js"></script>
+   <script src="js/jquery.fileupload-ui.js"></script>
+   <script src="js/main.js"></script>
     
   </body>
 </html>

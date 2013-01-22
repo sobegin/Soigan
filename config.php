@@ -81,4 +81,9 @@ try {
           </div>';
       }
 	}
+	function cryptage($text){
+		sha1(md5(sha1($text)));
+		return($cryptage);
+
+	}
 ?>

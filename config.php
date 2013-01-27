@@ -1,4 +1,5 @@
 <?php
+session_start();
 $dsn = 'mysql:dbname=soigan;host=127.0.0.1;charset=UTF-8';
 $user = 'root';
 $password = '';
@@ -65,7 +66,7 @@ try {
 		echo '<link href="css/'.$lien.'.css" rel="stylesheet">';
 	}
 //Fonction alerte
-	function alert($css,$contenu,$titre){
+	function alert($css,$contenu,$titre=NULL){
 		if(!empty($titre)){
 		echo '<div class="alert '.$css.' alert-block">
             <button type="button" class="close" data-dismiss="alert">×</button>
@@ -81,9 +82,30 @@ try {
           </div>';
       }
 	}
+	//Cryptage :)
 	function cryptage($text){
-		sha1(md5(sha1($text)));
-		return($cryptage);
+		
+		$text = md5(sha1($text));
+		return($text);
 
 	}
-?>
+	//Debug des variables
+	function debug($var){
+		echo '<pre>';
+		echo '<b>'.$_SERVER['SCRIPT_NAME'].'</b><br/ >';
+		foreach ($var as $k => $v) {
+			echo '<font color="red">'.$k.'</font> :: '.$v.'<br/ >';
+		}
+		echo '</pre>';
+
+
+	}
+	//Redirection avec temps
+	function redirect($lien,$temps){
+		echo '<script> window.setTimeout("location=("'.$lien.'");",'.$temps.');</script>';
+	}
+	function sessionflash($css,$contenu,$titre=NULL){
+
+
+	}
+	?>

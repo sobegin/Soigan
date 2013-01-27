@@ -1,5 +1,4 @@
-<?php include 'config.php'; 
-session_start() ?>
+<?php include 'config.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -89,7 +88,7 @@ session_start() ?>
     </label>
     <center><input type="submit" class="btn btn-success">Connexion</center><br/>
     <small><a href="#PassOubliez">Mot de passe perdu ?</a></small><br />
-    <small><a href="#Création">Crée un compte ?</a></small>
+    <small><a href="inscription.php">Crée un compte ?</a></small>
   </fieldset>
 </form>
                       </ul>
